@@ -1,0 +1,22 @@
+<h3>Donaciones Pendientes por Retirar</h3>
+<!--ORDENADAS POR FECHA ASC. SE PUEDEN FILTRAR?-->
+<table>
+  <thead>
+    <tr>
+      <th>Donante</th>
+      <th>Direccion</th>
+      <th>Fecha vencimiento</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let donacion of donaciones">
+      <td>donacion.usuario_id</td>
+      <td>donacion.sucursal</td>
+      <td>donacion.fecharetiro</td>
+      <td><button routerLink="/donacion/{{donacion.id}}">Detalle</button>
+        <!--*ngIf=" donacion.is_retired = false"-->
+      <button (click)="marsAsRetired(donacion)">Marcar como retirada</button></td>
+    </tr>
+  </tbody>
+</table>

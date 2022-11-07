@@ -1,0 +1,22 @@
+<h4 class="sub-header">Usuarios Donantes</h4>
+<a routerLink="/registro" routerLinkActive="active" class="btn">+ Nuevo Usuario</a>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">eMail</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let user of users">
+        <th>{{user.name}}</th>
+        <td>{{user.email}}</td>
+        <td><button routerLink="/editarusuario/{{user.id}}">Editar</button></td>
+        <td><button (click)="deleteUser(user)">X</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

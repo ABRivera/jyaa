@@ -1,0 +1,18 @@
+<h3>Recorridos Planificados</h3>
+<!--filtrar por fecha??-->
+<table>
+  <thead>
+    <tr>
+      <th>Recorrido</th>
+      <th>Fecha</th>
+      <th>Detalle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let recorrido of recorridos">
+      <td>{{recorrido.name}}</td>
+      <td>{{recorrido.date}}</td>
+      <td><button routerLink="/recorrido/{{recorrido.id}}">Ver Detalle</button></td>
+    </tr>
+  </tbody>
+</table>

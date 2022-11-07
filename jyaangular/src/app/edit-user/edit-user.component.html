@@ -1,0 +1,44 @@
+<section>
+    <div class="panel-heading">Editar Usuario</div>
+  <div class="panel-body">
+  <form (ngSubmit)="onSubmit()" #userEditForm="ngForm">
+    {{diagnostic}}
+    <div>
+        <label for="contacto">*Nombre de Contacto:</label>
+        <input type="text" id="name" name="name" placeholder="Maria Garcia" [(ngModel)]="user.name" required>
+        {{user.name}}
+      </div>
+    <div>
+      <label for="domicilio">*Domicilio:</label>
+      <input type="text" id="domicilio" name="domicilio" placeholder="Calle 7 n820" [(ngModel)]="user.domicilio" required>
+    </div>
+
+    <div>
+      <label for="telefono">*Teléfono/Celular</label>
+      <input type="text" id="telefono" name="telefono" placeholder="Ingrese el telefono" pattern="[0-9]{1,50}" title="Solo se admiten números" [(ngModel)]="user.telefono" required>
+    </div>
+
+    <div>
+      <label for="email">*eMail:</label>
+      <input type="email" id="email" name="email" placeholder="mail@example.com" [(ngModel)]="user.email" required>
+    </div>
+<!--
+    <div>
+      <label for="horario">*Horario de contacto</label>
+      de:
+      <input type="time" id="horaContactoIni" name="horaContactoIni" [(ngModel)]="user.horaContactoIni" required>
+    </div>
+    <div>
+      a
+      <input type="time" id="horaContactoFin" name="horaContactoFin" [(ngModel)]="user.horaContactoFin" required>
+    </div>
+    -->
+   <div>
+      <label for="password">Contraseña</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="contraseña" [(ngModel)]="user.password" required>
+    </div>
+    <p> Los campos con (*) son obligatorios </p>
+    <button type="submit" title="Guardar cambios" >Guardar cambios</button>
+  </form>
+</div>
+</section>

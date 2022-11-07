@@ -1,0 +1,36 @@
+<h3>Detalle de Donacion</h3>
+<!--if logged user is owner, then editButton?-->
+<!--Both only if isRetired=false-->
+<button (click)="marsAsRetired(donacion)">Marcar como retirada</button>
+<!--SEE HOW TO ADD TO ROUTE! Only if fechaRetiro > fechaActual-->
+<button (click)="addToRoute(donacion)">Agregar a un Recorrido</button>
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Detalles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Dirección:</th>
+      <td>donacion.address</td>
+    </tr>
+    <tr>
+      <th>Mapa:</th>
+      <td>**MAPA**</td>
+    </tr>
+    <tr>
+      <th>Fecha de Retiro</th>
+      <td>donacion.fechaRetiro</td>
+    </tr>
+    <tr>
+      <th>Horario para Retiro</th>
+      <td>donacion.initHour+" - "+donacion.endHour</td>
+    </tr>
+    <tr>
+      <th>Productos:</th>
+      <td>Listado de Productos</td>
+    </tr>
+
+  </tbody>
+</table>
